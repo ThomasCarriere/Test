@@ -1,0 +1,7 @@
+<h3>Détails de l'incident</h3>
+
+{% if ticketIncident %}
+	<p>Date de l'incident : {{ ticketIncident.pub_date }}<p>
+	<p>Description : {{ ticketIncident.Description }}</p>
+	<p>Adresse mail : {{ ticketIncident.Mail }}</p>
+{% endif %}

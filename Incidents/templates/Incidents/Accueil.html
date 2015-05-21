@@ -1,0 +1,12 @@
+<h3>Liste des incidents</h3>
+
+{% if Liste_Incidents %}
+    <ul>
+    {% for ticketIncident in Liste_Incidents %}
+        <li><a href="/Incidents/{{ ticketIncident.id }}/">{{ ticketIncident.Description }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Pas de tickets d'incidents pour le moment.</p>
+{% endif %}
+<input type="button" onclick="document.location.href='Ajout'" value="Déclarer un incident">

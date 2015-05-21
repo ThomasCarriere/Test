@@ -1,0 +1,17 @@
+<b><p>Formulaire de déclaration d'incident<p></b>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'Incidents:Ajouter' %}" method="post">
+{% csrf_token %}
+<p>Description de l'incident :</p>
+<textarea name="description" cols="50" rows="10"></textarea>
+<p>Adresse mail :</p>
+<input type="text" name="mail">
+<br />
+<br />
+<br />
+<input type="button" onclick="document.location.href={% url 'Incidents:Accueil' %}" value="Annuler">
+
+<input type="submit">
+</form>
