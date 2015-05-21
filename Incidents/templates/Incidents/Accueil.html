@@ -3,7 +3,7 @@
 {% if Liste_Incidents %}
     <ul>
     {% for ticketIncident in Liste_Incidents %}
-        <li><a href="/Incidents/{{ ticketIncident.id }}/">{{ ticketIncident.Description }}</a></li>
+        <li><a href="/Incidents/{{ ticketIncident.id }}/">Incident n°{{ ticketIncident.id }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
